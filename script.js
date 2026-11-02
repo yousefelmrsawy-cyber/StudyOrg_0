@@ -279,12 +279,9 @@
       card.className = `video-card ${isWatched ? 'watched' : ''}`;
       card.dataset.videoId = item.videoId;
 
-      const badgeClass = getSubjectClass(item.subject);
       const thumbUrl = `https://img.youtube.com/vi/${item.videoId}/mqdefault.jpg`;
-
       card.innerHTML = `
         <div class="card-thumbnail-wrap" title="Click to watch: ${escapeHtml(item.title)}">
-          <span class="badge ${badgeClass}">${escapeHtml(item.subject)}</span>
           <img class="card-thumbnail" src="${thumbUrl}" alt="${escapeHtml(item.title)}" loading="lazy">
           <div class="play-overlay">
             <div class="play-circle">
@@ -469,9 +466,7 @@
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 7. Start App
-  // --------------------------------------------------------------------------
+ 
   initTheme();
   loadWatchedState();
   setupEventListeners();
