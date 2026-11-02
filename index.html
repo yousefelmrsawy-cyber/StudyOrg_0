@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStudies • Video Lectures & Assignment Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="theLogoIcon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <img src="theLogoIcon.png" alt="MyStudies Hub Logo" class="brand-logo-img">
+        </div>
+        <div>
+          <h1 class="brand-title">MyStudies Hub</h1>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <div class="search-wrapper">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search lessons, topics, PDFs... (Press '/' to focus)" autocomplete="off">
+          <button id="clearSearchBtn" class="clear-btn" title="Clear search" aria-label="Clear search">&times;</button>
+        </div>
+
+        <button id="themeToggleBtn" class="icon-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2"/>
+            <path d="M12 20v2"/>
+            <path d="m4.93 4.93 1.41 1.41"/>
+            <path d="m17.66 17.66 1.41 1.41"/>
+            <path d="M2 12h2"/>
+            <path d="M20 12h2"/>
+            <path d="m6.34 17.66-1.41 1.41"/>
+            <path d="m19.07 4.93-1.41 1.41"/>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    <!-- Quick Statistics Banner -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Total Subjects</span>
+        <span class="stat-value" id="statSubjects">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Total Video Lessons</span>
+        <span class="stat-value" id="statVideos">0</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Study Progress</span>
+          <span class="stat-sublabel" id="statProgressText">0 / 0 watched</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressBarFill" style="width: 0%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-container">
+      <div class="subject-tabs-scroll">
+        <div class="subject-tabs" id="subjectTabs">
+          <button class="tab-btn active" data-subject="all">All Subjects</button>
+        </div>
+      </div>
+
+      <div class="status-filters">
+        <button class="status-btn active" data-status="all">All</button>
+        <button class="status-btn" data-status="unwatched">Unwatched</button>
+        <button class="status-btn" data-status="watched">Completed</button>
+      </div>
+    </section>
+
+    <!-- Results Header and loadiiiing <><><> -->
+    <div class="results-header">
+      <h2 id="activeSubjectHeading">All Subjects</h2>
+      <span class="results-count" id="resultsCount">Loading lessons...</span>
+    </div>
+
+    <!-- Cards Grid -->
+    <section class="videos-grid" id="videosGrid">
+    </section>
+
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="m21 21-4.3-4.3"/>
+        <line x1="8" y1="11" x2="14" y2="11"/>
+      </svg>
+      <h3>No videos found</h3>
+      <p>Try searching for a different keyword or select another subject filter.</p>
+      <button class="reset-search-btn" id="resetFiltersBtn">Reset Filters</button>
+    </div>
+  </main>
+
+  <!-- Video Player Modal -->
+  <div class="modal-overlay" id="videoModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge" id="modalSubject">Subject</span>
+          <h3 class="modal-title" id="modalTitle">Video Title</h3>
+          <p class="modal-source" id="modalSource">PDF Source</p>
+        </div>
+        <button class="modal-close-btn" id="closeModalBtn" aria-label="Close video player">&times;</button>
+      </div>
+      <div class="modal-player-container">
+        <iframe id="videoIframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <a id="modalExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="ext-btn">
+          Open on YouTube
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Connected to <code>MyStudies_Videos.md</code> &bull; Built By Yousef Elmersawy</p>
+  </footer>
+
+  <!-- Global Gooey Filter for Animated Checkbox -->
+  <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+    <defs>
+      <filter id="goo-12">
+        <feGaussianBlur result="blur" stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+        <feColorMatrix result="goo-12" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" mode="matrix" in="blur"></feColorMatrix>
+        <feBlend in2="goo-12" in="SourceGraphic"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Scripts: videos_data.js ensures local file:/// compatibility, script.js handles logic & live parsing -->
+  <script src="videos_data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

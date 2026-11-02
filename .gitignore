@@ -1,0 +1,9 @@
+# Local PDF files (keep repo fast and lightweight for GitHub Pages)
+MyStudies/
+
+# Python cache & secrets
+__pycache__/
+*.pyc
+client_secret.json
+token.json
+*.log
