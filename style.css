@@ -979,20 +979,20 @@ body {
 }
 
 .checkbox-wrapper-12 .cbx:hover {
-  transform: scale(1.12);
+  transform: scale(1.06);
 }
 
 .checkbox-wrapper-12 .cbx:active {
-  transform: scale(0.9);
+  transform: scale(0.92);
 }
 
 .checkbox-wrapper-12 .cbx input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 22px;
-  height: 22px;
-  border: 2px solid #94a3b8;
+  width: 19px;
+  height: 19px;
+  border: 1.8px solid #94a3b8;
   background-color: transparent;
   border-radius: 50%;
   appearance: none;
@@ -1010,7 +1010,7 @@ body {
 }
 
 .checkbox-wrapper-12 .cbx input:focus-visible {
-  box-shadow: 0 0 0 4px rgba(134, 110, 251, 0.35);
+  box-shadow: 0 0 0 3px rgba(134, 110, 251, 0.35);
 }
 
 .checkbox-wrapper-12 .cbx input:checked {
@@ -1018,8 +1018,8 @@ body {
 }
 
 .checkbox-wrapper-12 .cbx label {
-  width: 22px;
-  height: 22px;
+  width: 19px;
+  height: 19px;
   background: none;
   border-radius: 50%;
   position: absolute;
@@ -1032,27 +1032,27 @@ body {
 
 .checkbox-wrapper-12 .cbx svg {
   position: absolute;
-  top: 4px;
-  left: 3.5px;
+  top: 3.5px;
+  left: 3px;
   z-index: 1;
   pointer-events: none;
-  width: 15px;
-  height: 14px;
+  width: 13px;
+  height: 12px;
 }
-/*Ai recommendtion !!!!!*/
+
 .checkbox-wrapper-12 .cbx svg path {
   stroke: #fff;
-  stroke-width: 2.8;
+  stroke-width: 2.6;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 19;
   stroke-dashoffset: 19;
-  transition: stroke-dashoffset 0.3s ease;
-  transition-delay: 0.15s;
+  transition: stroke-dashoffset 0.22s ease;
+  transition-delay: 0.08s;
 }
 
 .checkbox-wrapper-12 .cbx input:checked + label {
-  animation: splash-12 0.6s ease forwards;
+  animation: splash-12 0.36s ease forwards;
 }
 
 .checkbox-wrapper-12 .cbx input:checked + label + svg path {
@@ -1062,12 +1062,12 @@ body {
 @keyframes splash-12 {
   40% {
     background: #866efb;
-    box-shadow: 0 -16px 0 -7px #866efb, 14px -7px 0 -7px #866efb, 14px 7px 0 -7px #866efb, 0 16px 0 -7px #866efb, -14px 7px 0 -7px #866efb, -14px -7px 0 -7px #866efb;
+    box-shadow: 0 -7px 0 -4px #866efb, 6px -3.5px 0 -4px #866efb, 6px 3.5px 0 -4px #866efb, 0 7px 0 -4px #866efb, -6px 3.5px 0 -4px #866efb, -6px -3.5px 0 -4px #866efb;
   }
 
   100% {
     background: #866efb;
-    box-shadow: 0 -32px 0 -9px transparent, 28px -14px 0 -9px transparent, 28px 14px 0 -9px transparent, 0 32px 0 -9px transparent, -28px 14px 0 -9px transparent, -28px -14px 0 -9px transparent;
+    box-shadow: 0 -13px 0 -5px transparent, 11px -6px 0 -5px transparent, 11px 6px 0 -5px transparent, 0 13px 0 -5px transparent, -11px 6px 0 -5px transparent, -11px -6px 0 -5px transparent;
   }
 }
 
