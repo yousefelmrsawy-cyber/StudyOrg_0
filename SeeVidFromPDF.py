@@ -235,13 +235,14 @@ def build_playlists(lessons_folder: str, privacy: str = "private", search_suffix
                 if not vid:
                     print(f"  [no video found] {pdf.name}")
                     continue
+                if vid in already:
+                    print(f"  [already in {subject}] {pdf.name} -> {title}")
+                    continue
+                already.add(vid)
+
                 if yt and playlist_id:
-                    if vid in already:
-                        print(f"  [already in playlist] {pdf.name} -> {title}")
-                    else:
-                        add_video(yt, playlist_id, vid)
-                        already.add(vid)
-                        print(f"  [added to playlist] {pdf.name} -> {title}")
+                    add_video(yt, playlist_id, vid)
+                    print(f"  [added to playlist] {pdf.name} -> {title}")
                 else:
                     print(f"  [found] {pdf.name} -> {title} (https://youtu.be/{vid})")
                 report[subject].append((pdf.name, title, f"https://youtu.be/{vid}"))

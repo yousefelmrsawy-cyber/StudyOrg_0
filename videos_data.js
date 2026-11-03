@@ -18,12 +18,6 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "YNstP0ESndU"
     },
     {
-      "pdf": "MATH 1 - H.W Assignment (12).pdf",
-      "title": "Calculus 1 - Introduction to Limits",
-      "url": "https://youtu.be/YNstP0ESndU",
-      "videoId": "YNstP0ESndU"
-    },
-    {
       "pdf": "MATH 1 - H.W Assignment (13).pdf",
       "title": "Calculus 1 Review -  Basic Introduction",
       "url": "https://youtu.be/GiCojsAWRj0",
@@ -42,28 +36,10 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "WmBzmHru78w"
     },
     {
-      "pdf": "MATH 1 - H.W Assignment (17).pdf",
-      "title": "Calculus 1 Review -  Basic Introduction",
-      "url": "https://youtu.be/GiCojsAWRj0",
-      "videoId": "GiCojsAWRj0"
-    },
-    {
       "pdf": "MATH 1 - H.W Assignment (19).pdf",
       "title": "Limits and Continuity, Part 2 (Calculus Homework Problems and Solutions)",
       "url": "https://youtu.be/C1U3TKgDaOE",
       "videoId": "C1U3TKgDaOE"
-    },
-    {
-      "pdf": "MATH 1 - H.W Assignment (2).pdf",
-      "title": "Calculus 1 Review -  Basic Introduction",
-      "url": "https://youtu.be/GiCojsAWRj0",
-      "videoId": "GiCojsAWRj0"
-    },
-    {
-      "pdf": "MATH 1 - H.W Assignment (20).pdf",
-      "title": "Calculus 1 Review -  Basic Introduction",
-      "url": "https://youtu.be/GiCojsAWRj0",
-      "videoId": "GiCojsAWRj0"
     },
     {
       "pdf": "MATH 1 - H.W Assignment (21).pdf",
@@ -84,12 +60,6 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "0smwSMYcP48"
     },
     {
-      "pdf": "MATH 1 - H.W Assignment (5).pdf",
-      "title": "Calculus 1 Review -  Basic Introduction",
-      "url": "https://youtu.be/GiCojsAWRj0",
-      "videoId": "GiCojsAWRj0"
-    },
-    {
       "pdf": "MATH 1 - H.W Assignment (6).pdf",
       "title": "Calculus Ch.1 Lecture 6 Hw illustration Video",
       "url": "https://youtu.be/rlBjrW7-baY",
@@ -100,29 +70,11 @@ window.STUDY_VIDEOS_DATA = {
       "title": "Calculus BC Assignment 7-1 Part 1 Questions 1-21",
       "url": "https://youtu.be/lnXetjYVHEc",
       "videoId": "lnXetjYVHEc"
-    },
-    {
-      "pdf": "MATH 1 - H.W Assignment (8).pdf",
-      "title": "Calculus 1 Final Exam Review",
-      "url": "https://youtu.be/WmBzmHru78w",
-      "videoId": "WmBzmHru78w"
     }
   ],
   "Chemistry 1": [
     {
       "pdf": "Chemistry 1 - H.W Assignment (2).pdf",
-      "title": "Chemical Equilibrium Constant K - Ice Tables - Kp and Kc",
-      "url": "https://youtu.be/J4WJCYpTYj8",
-      "videoId": "J4WJCYpTYj8"
-    },
-    {
-      "pdf": "Chemistry 1 - H.W Assignment (3).pdf",
-      "title": "Chemical Equilibrium Constant K - Ice Tables - Kp and Kc",
-      "url": "https://youtu.be/J4WJCYpTYj8",
-      "videoId": "J4WJCYpTYj8"
-    },
-    {
-      "pdf": "Chemistry 1 - H.W Assignment (4).pdf",
       "title": "Chemical Equilibrium Constant K - Ice Tables - Kp and Kc",
       "url": "https://youtu.be/J4WJCYpTYj8",
       "videoId": "J4WJCYpTYj8"
@@ -172,12 +124,6 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "1I5ZMmrOfnA"
     },
     {
-      "pdf": "Computer Science - H.W Assignment (6).pdf",
-      "title": "Boolean Logic & Logic Gates: Crash Course Computer Science #3",
-      "url": "https://youtu.be/gI-qXk7XojA",
-      "videoId": "gI-qXk7XojA"
-    },
-    {
       "pdf": "Computer Science - H.W Assignment (8).pdf",
       "title": "Intro to Algorithms: Crash Course Computer Science #13",
       "url": "https://youtu.be/rL8X2mlNHPM",
@@ -210,22 +156,10 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "fID-kYrWnsY"
     },
     {
-      "pdf": "Engineering Drawing - H.W Assignment (3).pdf",
-      "title": "tangency problem| crane hook | engineering and technical drawing",
-      "url": "https://youtu.be/fID-kYrWnsY",
-      "videoId": "fID-kYrWnsY"
-    },
-    {
       "pdf": "Engineering Drawing - H.W Assignment (4).pdf",
       "title": "Understanding Engineering Drawings",
       "url": "https://youtu.be/ht9GwXQMgpo",
       "videoId": "ht9GwXQMgpo"
-    },
-    {
-      "pdf": "Engineering Drawing - H.W Assignment.pdf",
-      "title": "tangency problem| crane hook | engineering and technical drawing",
-      "url": "https://youtu.be/fID-kYrWnsY",
-      "videoId": "fID-kYrWnsY"
     },
     {
       "pdf": "Engineering Drawing_Document_General (3).pdf",
@@ -238,12 +172,6 @@ window.STUDY_VIDEOS_DATA = {
       "title": "HW 4 Afternoon Lab MECH4259 S2023",
       "url": "https://youtu.be/VDsA2FnVXUQ",
       "videoId": "VDsA2FnVXUQ"
-    },
-    {
-      "pdf": "Engineering Drawing_Document_الرسم الهندسى.pdf",
-      "title": "Understanding Engineering Drawings",
-      "url": "https://youtu.be/ht9GwXQMgpo",
-      "videoId": "ht9GwXQMgpo"
     }
   ],
   "General": [
@@ -278,28 +206,10 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "PaakzfJ8cqQ"
     },
     {
-      "pdf": "General - H.W Assignment (15).pdf",
-      "title": "US CMA Part 1 Basics Explained Lecture -1 2026-2027 by CA CMA Rohit Singhal",
-      "url": "https://youtu.be/PaakzfJ8cqQ",
-      "videoId": "PaakzfJ8cqQ"
-    },
-    {
       "pdf": "General - H.W Assignment (16).pdf",
       "title": "Class: Two, Subject: General Science (Lecture- 05),Topic: Assignment",
       "url": "https://youtu.be/XOr_DWq9fTI",
       "videoId": "XOr_DWq9fTI"
-    },
-    {
-      "pdf": "General - H.W Assignment (17).pdf",
-      "title": "US CMA Part 1 Basics Explained Lecture -1 2026-2027 by CA CMA Rohit Singhal",
-      "url": "https://youtu.be/PaakzfJ8cqQ",
-      "videoId": "PaakzfJ8cqQ"
-    },
-    {
-      "pdf": "General - H.W Assignment (18).pdf",
-      "title": "US CMA Part 1 Basics Explained Lecture -1 2026-2027 by CA CMA Rohit Singhal",
-      "url": "https://youtu.be/PaakzfJ8cqQ",
-      "videoId": "PaakzfJ8cqQ"
     },
     {
       "pdf": "General - H.W Assignment (19).pdf",
@@ -416,18 +326,6 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "l5Ij7nUy9UQ"
     },
     {
-      "pdf": "General - H.W Assignment (37).pdf",
-      "title": "What is Material Balance/Mass Balance Equation | General Material Balance Equation | Learn CHE.",
-      "url": "https://youtu.be/08n4n7pI2ek",
-      "videoId": "08n4n7pI2ek"
-    },
-    {
-      "pdf": "General - H.W Assignment (38).pdf",
-      "title": "What is Material Balance/Mass Balance Equation | General Material Balance Equation | Learn CHE.",
-      "url": "https://youtu.be/08n4n7pI2ek",
-      "videoId": "08n4n7pI2ek"
-    },
-    {
       "pdf": "General - H.W Assignment (39).pdf",
       "title": "Electrochemistry Review - Cell Potential & Notation, Redox Half Reactions, Nernst Equation",
       "url": "https://youtu.be/ImV8LyujjqY",
@@ -440,46 +338,10 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "EgP2g_Hl1ic"
     },
     {
-      "pdf": "General - H.W Assignment (40).pdf",
-      "title": "Electrochemistry",
-      "url": "https://youtu.be/2VT5rl8P84M",
-      "videoId": "2VT5rl8P84M"
-    },
-    {
-      "pdf": "General - H.W Assignment (41).pdf",
-      "title": "Gas Law Formulas and Equations - College Chemistry Study Guide",
-      "url": "https://youtu.be/W2g2iP83JoI",
-      "videoId": "W2g2iP83JoI"
-    },
-    {
-      "pdf": "General - H.W Assignment (42).pdf",
-      "title": "Gas Law Formulas and Equations - College Chemistry Study Guide",
-      "url": "https://youtu.be/W2g2iP83JoI",
-      "videoId": "W2g2iP83JoI"
-    },
-    {
       "pdf": "General - H.W Assignment (43).pdf",
       "title": "Understanding the Finite Element Method",
       "url": "https://youtu.be/GHjopp47vvQ",
       "videoId": "GHjopp47vvQ"
-    },
-    {
-      "pdf": "General - H.W Assignment (44).pdf",
-      "title": "Lecture 07 (Part 01): Division 03 (Concrete) & Division 04 (Masonry) in Construction Estimating",
-      "url": "https://youtu.be/B5TS17CRA-8",
-      "videoId": "B5TS17CRA-8"
-    },
-    {
-      "pdf": "General - H.W Assignment (45).pdf",
-      "title": "Introduction to Combustion Analysis, Empirical Formula & Molecular Formula Problems",
-      "url": "https://youtu.be/uvR7zNJ1KoI",
-      "videoId": "uvR7zNJ1KoI"
-    },
-    {
-      "pdf": "General - H.W Assignment (46).pdf",
-      "title": "Introduction to Combustion Analysis, Empirical Formula & Molecular Formula Problems",
-      "url": "https://youtu.be/uvR7zNJ1KoI",
-      "videoId": "uvR7zNJ1KoI"
     },
     {
       "pdf": "General - H.W Assignment (47).pdf",
@@ -518,40 +380,16 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "fRJ0herT7VU"
     },
     {
-      "pdf": "General_Document_ch. 1خواص.pdf",
-      "title": "Section 1 - Chapter 1 principles of general chemistry ( part 1 )",
-      "url": "https://youtu.be/EgP2g_Hl1ic",
-      "videoId": "EgP2g_Hl1ic"
-    },
-    {
       "pdf": "General_Document_Chap. 1.pdf",
       "title": "Chp#01 (Part1) Lippincott Pharma | PHARMACOKINETICS | Pharmacology | Dr Asif Lectures",
       "url": "https://youtu.be/GzqnMl3xv6o",
       "videoId": "GzqnMl3xv6o"
     },
     {
-      "pdf": "General_Document_الإحتراق.pdf",
-      "title": "Combustion and Heat Transfer | 2nd Year | 1st Lecture | Aerospace Dep. CUFE",
-      "url": "https://youtu.be/rvqTTMMJB14",
-      "videoId": "rvqTTMMJB14"
-    },
-    {
       "pdf": "General_Schedule_جدول مستوى صفر الترم الأول _2027 (1).pdf",
       "title": "This is How to Get Ahead in Life, Make Money & Build Wealth",
       "url": "https://youtu.be/YekLo4zAhXQ",
       "videoId": "YekLo4zAhXQ"
-    },
-    {
-      "pdf": "General_Sheet_Sheet 1.pdf",
-      "title": "THE DLES / Tape to Tape - 26 Oct 2026 - Unofficial Northernlion VOD",
-      "url": "https://youtu.be/rUUkU7w0LcE",
-      "videoId": "rUUkU7w0LcE"
-    },
-    {
-      "pdf": "General_Sheet_sheet_units_dimensions.pdf",
-      "title": "Units & Dimensions - One Shot | AP & TG Class 11 & 12 Physics | JEE/EAPCET/NEET 2027 | Rama Madam",
-      "url": "https://youtu.be/VYnAFpInJBI",
-      "videoId": "VYnAFpInJBI"
     }
   ],
   "Mechanics": [
@@ -610,12 +448,6 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "C9oWXIs2g3Y"
     },
     {
-      "pdf": "Mechanics - H.W Assignment (19).pdf",
-      "title": "Understanding Calculus (for engineers)",
-      "url": "https://youtu.be/C9oWXIs2g3Y",
-      "videoId": "C9oWXIs2g3Y"
-    },
-    {
       "pdf": "Mechanics - H.W Assignment (2).pdf",
       "title": "#Introduction_to_Quantum_Mechanics_",
       "url": "https://youtu.be/npcNkR7n22c",
@@ -626,12 +458,6 @@ window.STUDY_VIDEOS_DATA = {
       "title": "19. Introduction to Mechanical Vibration",
       "url": "https://youtu.be/9_d8CQrCYUw",
       "videoId": "9_d8CQrCYUw"
-    },
-    {
-      "pdf": "Mechanics - H.W Assignment (21).pdf",
-      "title": "Understanding Calculus (for engineers)",
-      "url": "https://youtu.be/C9oWXIs2g3Y",
-      "videoId": "C9oWXIs2g3Y"
     },
     {
       "pdf": "Mechanics - H.W Assignment (22).pdf",
@@ -658,58 +484,16 @@ window.STUDY_VIDEOS_DATA = {
       "videoId": "gyt9vdTLh_M"
     },
     {
-      "pdf": "Mechanics - H.W Assignment (3).pdf",
-      "title": "Force Vectors and VECTOR COMPONENTS in 11 Minutes! - STATICS",
-      "url": "https://youtu.be/Gz09VNG5wJc",
-      "videoId": "Gz09VNG5wJc"
-    },
-    {
-      "pdf": "Mechanics - H.W Assignment (4).pdf",
-      "title": "Understanding Calculus (for engineers)",
-      "url": "https://youtu.be/C9oWXIs2g3Y",
-      "videoId": "C9oWXIs2g3Y"
-    },
-    {
-      "pdf": "Mechanics - H.W Assignment (5).pdf",
-      "title": "Force Vectors and VECTOR COMPONENTS in 11 Minutes! - STATICS",
-      "url": "https://youtu.be/Gz09VNG5wJc",
-      "videoId": "Gz09VNG5wJc"
-    },
-    {
-      "pdf": "Mechanics - H.W Assignment (6).pdf",
-      "title": "Understanding Calculus (for engineers)",
-      "url": "https://youtu.be/C9oWXIs2g3Y",
-      "videoId": "C9oWXIs2g3Y"
-    },
-    {
       "pdf": "Mechanics - H.W Assignment (7).pdf",
       "title": "A Level Math [M1] - Kinematics [Lecture 7/7]",
       "url": "https://youtu.be/am4hHv8z6kM",
       "videoId": "am4hHv8z6kM"
     },
     {
-      "pdf": "Mechanics - H.W Assignment (8).pdf",
-      "title": "Engineering Mechanics Assignment -1",
-      "url": "https://youtu.be/gyt9vdTLh_M",
-      "videoId": "gyt9vdTLh_M"
-    },
-    {
-      "pdf": "Mechanics - H.W Assignment (9).pdf",
-      "title": "Understanding Calculus (for engineers)",
-      "url": "https://youtu.be/C9oWXIs2g3Y",
-      "videoId": "C9oWXIs2g3Y"
-    },
-    {
       "pdf": "Mechanics - H.W Assignment.pdf",
       "title": "Mechanics lecture one Applied Health Science Nile Valley University (NVU)",
       "url": "https://youtu.be/MysG0TRicrs",
       "videoId": "MysG0TRicrs"
-    },
-    {
-      "pdf": "Mechanics_Assignment_Statics, assignment #2_261006_003752.pdf",
-      "title": "#Introduction_to_Quantum_Mechanics_",
-      "url": "https://youtu.be/npcNkR7n22c",
-      "videoId": "npcNkR7n22c"
     },
     {
       "pdf": "Mechanics_Lecture_Notes_No_01.pdf",
@@ -721,12 +505,6 @@ window.STUDY_VIDEOS_DATA = {
   "Physics 1": [
     {
       "pdf": "Physics 1 - H.W Assignment (2).pdf",
-      "title": "Physics - Basic Introduction",
-      "url": "https://youtu.be/b1t41Q3xRM8",
-      "videoId": "b1t41Q3xRM8"
-    },
-    {
-      "pdf": "Physics 1 - H.W Assignment (3).pdf",
       "title": "Physics - Basic Introduction",
       "url": "https://youtu.be/b1t41Q3xRM8",
       "videoId": "b1t41Q3xRM8"

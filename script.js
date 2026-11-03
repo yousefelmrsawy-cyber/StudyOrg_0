@@ -202,11 +202,23 @@
 
   function getAllVideos() {
     const all = [];
+    const seenVideos = new Set();
+
     for (const [subject, list] of Object.entries(studyData)) {
       if (!Array.isArray(list)) continue;
       for (const rawItem of list) {
         const url = rawItem.url || rawItem.link || '';
         const videoId = rawItem.videoId || extractYouTubeId(url);
+
+        // Deduplicate: ignore repeated videos within the same subject
+        const dedupKey = `${subject}:::${videoId || url}`;
+        if (dedupKey && seenVideos.has(dedupKey)) {
+          continue;
+        }
+        if (dedupKey) {
+          seenVideos.add(dedupKey);
+        }
+
         const pdf = rawItem.pdf || 'Custom Video';
         const title = (videoId && youtubeTitleCache[videoId]) || rawItem.title || 'YouTube Video';
         all.push({
