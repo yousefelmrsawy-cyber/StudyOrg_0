@@ -113,9 +113,21 @@
   async function loadData() {
     let loaded = false;
 
+    // Check if user has saved live changes via YTB_Control
+    try {
+      const custom = localStorage.getItem('mystudies_custom_data');
+      if (custom) {
+        const parsedCustom = JSON.parse(custom);
+        if (parsedCustom && Object.keys(parsedCustom).length > 0) {
+          studyData = parsedCustom;
+          loaded = true;
+        }
+      }
+    } catch (e) {}
+
     // Check if window.STUDY_VIDEOS_DATA is available right away
-    if (window.STUDY_VIDEOS_DATA && Object.keys(window.STUDY_VIDEOS_DATA).length > 0) {
-      studyData = window.STUDY_VIDEOS_DATA;
+    if (!loaded && window.STUDY_VIDEOS_DATA && Object.keys(window.STUDY_VIDEOS_DATA).length > 0) {
+      studyData = JSON.parse(JSON.stringify(window.STUDY_VIDEOS_DATA));
       loaded = true;
     }
 
@@ -136,7 +148,7 @@
     }
 
     if (!loaded) {
-      resultsCount.textContent = 'Unable to load study data.';
+      resultsCount.textContent = 'Ro7 Zakre F7etta Tanwa !!! <3';
       return;
     }
 
@@ -516,6 +528,156 @@
     });
   }
 
+
+  // --------------------------------------------------------------------------
+  // 7. YTB_Control: Live Browser Console Controller
+  // --------------------------------------------------------------------------
+  window.YTB_Control = async function (category, url) {
+    if (!category) {
+      console.log(
+        '%c[YTB_Control Guide]%c\n' +
+        '• Add Video:    YTB_Control("MATH 1", "https://www.youtube.com/watch?v=...")\n' +
+        '• Delete Video: YTB_Control("Del", "https://www.youtube.com/watch?v=...")\n' +
+        '• Export Data:  YTB_Control("export")\n' +
+        '• Reset Data:   YTB_Control("reset")',
+        'color: #3b82f6; font-weight: bold; font-size: 1.05em;', 'color: inherit;'
+      );
+      return 'YTB_Control ready. Pass a category and URL to add/delete.';
+    }
+
+    const catNormalized = String(category).trim();
+
+    // Command: Export code for videos_data.js
+    if (catNormalized.toLowerCase() === 'export') {
+      const code = 'window.STUDY_VIDEOS_DATA = ' + JSON.stringify(studyData, null, 2) + ';\n';
+      console.log('%c[YTB_Control Export] Copy and paste this directly into videos_data.js:%c', 'color: #10b981; font-weight: bold;', '');
+      console.log(code);
+      return code;
+    }
+
+    // Command: Reset back to original videos_data.js
+    if (catNormalized.toLowerCase() === 'reset') {
+      localStorage.removeItem('mystudies_custom_data');
+      if (window.STUDY_VIDEOS_DATA) {
+        studyData = JSON.parse(JSON.stringify(window.STUDY_VIDEOS_DATA));
+      }
+      buildSubjectTabs();
+      updateStats();
+      renderVideos();
+      console.log('%c[YTB_Control] Reset website back to default videos_data.js!%c', 'color: #f59e0b; font-weight: bold;', '');
+      return 'Reset successful.';
+    }
+
+    if (!url) {
+      console.warn('[YTB_Control] Please provide a YouTube URL.\nExample: YTB_Control("MATH 1", "https://www.youtube.com/watch?v=...")');
+      return 'Missing URL.';
+    }
+
+    const cleanUrl = String(url).trim();
+    const targetId = extractYouTubeId(cleanUrl);
+
+    // Command: Delete Video ("Del", "del", "delete", "remove")
+    if (['del', 'delete', 'remove'].includes(catNormalized.toLowerCase())) {
+      let removedCount = 0;
+      let removedFrom = [];
+
+      for (const [subKey, items] of Object.entries(studyData)) {
+        if (!Array.isArray(items)) continue;
+        const initialLen = items.length;
+        studyData[subKey] = items.filter(item => {
+          const itemUrl = item.url || item.link || '';
+          const itemId = item.videoId || extractYouTubeId(itemUrl);
+          const isMatch = (targetId && itemId === targetId) || (itemUrl && itemUrl === cleanUrl);
+          return !isMatch;
+        });
+        if (studyData[subKey].length < initialLen) {
+          removedCount += (initialLen - studyData[subKey].length);
+          removedFrom.push(subKey);
+        }
+      }
+
+      if (removedCount > 0) {
+        localStorage.setItem('mystudies_custom_data', JSON.stringify(studyData));
+        buildSubjectTabs();
+        updateStats();
+        renderVideos();
+
+        console.log(
+          `%c[YTB_Control] Successfully deleted video from [${removedFrom.join(', ')}]!%c`,
+          'color: #ef4444; font-weight: bold;', ''
+        );
+        console.log('Updated videos_data.js code (saved to browser storage):');
+        console.log('window.STUDY_VIDEOS_DATA = ' + JSON.stringify(studyData, null, 2) + ';');
+        return `Deleted ${removedCount} video(s) matching "${cleanUrl}".`;
+      } else {
+        console.warn(`[YTB_Control] No video found matching: ${cleanUrl}`);
+        return 'Video not found.';
+      }
+    }
+
+    // Command: Add Video to Category
+    let targetCategory = Object.keys(studyData).find(
+      key => key.toLowerCase() === catNormalized.toLowerCase()
+    );
+
+    if (!targetCategory) {
+      targetCategory = catNormalized;
+      studyData[targetCategory] = [];
+    }
+
+    // Check if video is already in this category
+    const alreadyExists = studyData[targetCategory].some(item => {
+      const itemUrl = item.url || item.link || '';
+      const itemId = item.videoId || extractYouTubeId(itemUrl);
+      return (targetId && itemId === targetId) || (itemUrl && itemUrl === cleanUrl);
+    });
+
+    if (alreadyExists) {
+      console.warn(`[YTB_Control] Video already exists in "${targetCategory}"!`);
+      return `Video already exists in "${targetCategory}".`;
+    }
+
+    // Auto-fetch real YouTube title
+    let videoTitle = 'YouTube Video';
+    if (targetId) {
+      try {
+        const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${encodeURIComponent(targetId)}&format=json`;
+        const resp = await fetch(oembedUrl);
+        if (resp.ok) {
+          const odata = await resp.json();
+          if (odata && odata.title) {
+            videoTitle = odata.title;
+            youtubeTitleCache[targetId] = odata.title;
+            saveTitleCache();
+          }
+        }
+      } catch (e) {}
+    }
+
+    const newVideo = {
+      title: videoTitle,
+      url: cleanUrl,
+      videoId: targetId
+    };
+
+    studyData[targetCategory].push(newVideo);
+
+    // Save to localStorage so it persists across page reloads on live web
+    localStorage.setItem('mystudies_custom_data', JSON.stringify(studyData));
+
+    buildSubjectTabs();
+    updateStats();
+    renderVideos();
+
+    console.log(
+      `%c[YTB_Control] Added video to "${targetCategory}"!%c\nTitle: ${videoTitle}\nURL: ${cleanUrl}`,
+      'color: #10b981; font-weight: bold;', ''
+    );
+    console.log('Updated videos_data.js code (saved to browser storage):');
+    console.log('window.STUDY_VIDEOS_DATA = ' + JSON.stringify(studyData, null, 2) + ';');
+
+    return `Added to "${targetCategory}": ${videoTitle}`;
+  };
 
   initTheme();
   loadWatchedState();
