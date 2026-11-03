@@ -1,108 +1,108 @@
 window.STUDY_VIDEOS_DATA = {
   "Math 1": [
     {
-      "title":"MATH 1 - Domain and Range",
-      "url":"https://www.youtube.com/watch?v=n81dAbhG2kk&t=4822s&pp=ygUoZG9tYWluIGFuZCByYW5nZSDYp9i52K_Yp9iv2Yog2YfZhtiv2LPZhw%3D%3D"
-    }
-    ,
+      "title": "session 1 | real functions , domain , range & increasing , decreasing .. فلسطين حرة",
+      "url": "https://www.youtube.com/watch?v=n81dAbhG2kk&t=4822s&pp=ygUoZG9tYWluIGFuZCByYW5nZSDYp9i52K_Yp9iv2Yog2YfZhtiv2LPZhw%3D%3D",
+      "videoId": "n81dAbhG2kk"
+    },
     {
-      "pdf": "Calculus 1 - H.W Assignment (10).pdf",
+      "pdf": "MATH 1 - H.W Assignment (10).pdf",
       "title": "Calculus 1 - Derivatives",
       "url": "https://youtu.be/5yfh5cf4-0w",
       "videoId": "5yfh5cf4-0w"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (11).pdf",
+      "pdf": "MATH 1 - H.W Assignment (11).pdf",
       "title": "Calculus 1 - Introduction to Limits",
       "url": "https://youtu.be/YNstP0ESndU",
       "videoId": "YNstP0ESndU"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (12).pdf",
+      "pdf": "MATH 1 - H.W Assignment (12).pdf",
       "title": "Calculus 1 - Introduction to Limits",
       "url": "https://youtu.be/YNstP0ESndU",
       "videoId": "YNstP0ESndU"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (13).pdf",
+      "pdf": "MATH 1 - H.W Assignment (13).pdf",
       "title": "Calculus 1 Review -  Basic Introduction",
       "url": "https://youtu.be/GiCojsAWRj0",
       "videoId": "GiCojsAWRj0"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (15).pdf",
+      "pdf": "MATH 1 - H.W Assignment (15).pdf",
       "title": "Calculus 1 Section 1 1 #15",
       "url": "https://youtu.be/hMCLVGA4pzw",
       "videoId": "hMCLVGA4pzw"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (16).pdf",
+      "pdf": "MATH 1 - H.W Assignment (16).pdf",
       "title": "Calculus 1 Final Exam Review",
       "url": "https://youtu.be/WmBzmHru78w",
       "videoId": "WmBzmHru78w"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (17).pdf",
+      "pdf": "MATH 1 - H.W Assignment (17).pdf",
       "title": "Calculus 1 Review -  Basic Introduction",
       "url": "https://youtu.be/GiCojsAWRj0",
       "videoId": "GiCojsAWRj0"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (19).pdf",
+      "pdf": "MATH 1 - H.W Assignment (19).pdf",
       "title": "Limits and Continuity, Part 2 (Calculus Homework Problems and Solutions)",
       "url": "https://youtu.be/C1U3TKgDaOE",
       "videoId": "C1U3TKgDaOE"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (2).pdf",
+      "pdf": "MATH 1 - H.W Assignment (2).pdf",
       "title": "Calculus 1 Review -  Basic Introduction",
       "url": "https://youtu.be/GiCojsAWRj0",
       "videoId": "GiCojsAWRj0"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (20).pdf",
+      "pdf": "MATH 1 - H.W Assignment (20).pdf",
       "title": "Calculus 1 Review -  Basic Introduction",
       "url": "https://youtu.be/GiCojsAWRj0",
       "videoId": "GiCojsAWRj0"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (21).pdf",
+      "pdf": "MATH 1 - H.W Assignment (21).pdf",
       "title": "Dr  Swiersz Video Explaining How to Solve Section 2 1 Homework Exercises #21 & #22   20170821",
       "url": "https://youtu.be/RMCwFNw61bM",
       "videoId": "RMCwFNw61bM"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (3).pdf",
+      "pdf": "MATH 1 - H.W Assignment (3).pdf",
       "title": "حل ورقة عمل التوزيع الطبيعي صح وخطأ",
       "url": "https://youtu.be/EWdN7QmPxGs",
       "videoId": "EWdN7QmPxGs"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (4).pdf",
+      "pdf": "MATH 1 - H.W Assignment (4).pdf",
       "title": "Calculus Assignment 4-5 Part 2",
       "url": "https://youtu.be/0smwSMYcP48",
       "videoId": "0smwSMYcP48"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (5).pdf",
+      "pdf": "MATH 1 - H.W Assignment (5).pdf",
       "title": "Calculus 1 Review -  Basic Introduction",
       "url": "https://youtu.be/GiCojsAWRj0",
       "videoId": "GiCojsAWRj0"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (6).pdf",
-      "title": "Calculus Ch.1 Lecture 6 Homework Correction Video",
+      "pdf": "MATH 1 - H.W Assignment (6).pdf",
+      "title": "Calculus Ch.1 Lecture 6 Hw illustration Video",
       "url": "https://youtu.be/rlBjrW7-baY",
       "videoId": "rlBjrW7-baY"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (7).pdf",
+      "pdf": "MATH 1 - H.W Assignment (7).pdf",
       "title": "Calculus BC Assignment 7-1 Part 1 Questions 1-21",
       "url": "https://youtu.be/lnXetjYVHEc",
       "videoId": "lnXetjYVHEc"
     },
     {
-      "pdf": "Calculus 1 - H.W Assignment (8).pdf",
+      "pdf": "MATH 1 - H.W Assignment (8).pdf",
       "title": "Calculus 1 Final Exam Review",
       "url": "https://youtu.be/WmBzmHru78w",
       "videoId": "WmBzmHru78w"
@@ -217,7 +217,7 @@ window.STUDY_VIDEOS_DATA = {
     },
     {
       "pdf": "Engineering Drawing - H.W Assignment (4).pdf",
-      "title": "فهم الرسومات الهندسية",
+      "title": "Understanding Engineering Drawings",
       "url": "https://youtu.be/ht9GwXQMgpo",
       "videoId": "ht9GwXQMgpo"
     },
@@ -351,7 +351,7 @@ window.STUDY_VIDEOS_DATA = {
     },
     {
       "pdf": "General - H.W Assignment (27).pdf",
-      "title": "Lectures 1 and 2: Zoology 1 - Freshman Science, Kafrelsheikh University (Dr. Gomaa's Curriculum)",
+      "title": "المحاضرة الأولي والتانية زولوجى 1 أولى علوم جامعة كفرالشيخ منهج دكتور جمعة ",
       "url": "https://youtu.be/vvBQGURjgjc",
       "videoId": "vvBQGURjgjc"
     },
@@ -537,7 +537,7 @@ window.STUDY_VIDEOS_DATA = {
     },
     {
       "pdf": "General_Schedule_جدول مستوى صفر الترم الأول _2027 (1).pdf",
-      "title": "هكذا تتقدم في الحياة وتكسب المال وتبني الثروة",
+      "title": "This is How to Get Ahead in Life, Make Money & Build Wealth",
       "url": "https://youtu.be/YekLo4zAhXQ",
       "videoId": "YekLo4zAhXQ"
     },

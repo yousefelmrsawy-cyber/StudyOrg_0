@@ -1,14 +1,14 @@
 //AI recommendtion !!!
 (function () {
+
   
-  // State
   let studyData = {};
   let activeSubject = 'all';
-  let activeStatus = 'all'; // 'all' | 'watched' | 'unwatched'
+  let activeStatus = 'all';
   let searchQuery = '';
   let watchedVideos = new Set();
 
-  // DOM Elements
+  // DOM 
   const searchInput = document.getElementById('searchInput');
   const clearSearchBtn = document.getElementById('clearSearchBtn');
   const themeToggleBtn = document.getElementById('themeToggleBtn');
@@ -20,13 +20,13 @@
   const activeSubjectHeading = document.getElementById('activeSubjectHeading');
   const resultsCount = document.getElementById('resultsCount');
 
-  // Stats Elements
+  // Stats 
   const statSubjects = document.getElementById('statSubjects');
   const statVideos = document.getElementById('statVideos');
   const statProgressText = document.getElementById('statProgressText');
   const progressBarFill = document.getElementById('progressBarFill');
 
-  // Modal Elements
+  // Modal 
   const videoModal = document.getElementById('videoModal');
   const closeModalBtn = document.getElementById('closeModalBtn');
   const videoIframe = document.getElementById('videoIframe');
@@ -73,7 +73,7 @@
   // --------------------------------------------------------------------------
   // 2. Data Loading & Markdown Parsing
   // --------------------------------------------------------------------------
- 
+
   function parseMarkdownData(mdContent) {
     const data = {};
     const lines = mdContent.split(/\r?\n/);
@@ -150,7 +150,7 @@
   // --------------------------------------------------------------------------
   function getSubjectClass(subjectName) {
     const s = subjectName.toLowerCase();
-    if (s.includes('calculus')) return 'badge-calculus';
+    if (s.includes('MATH')) return 'badge-MATH';
     if (s.includes('chemistry')) return 'badge-chemistry';
     if (s.includes('computer')) return 'badge-cs';
     if (s.includes('drawing')) return 'badge-drawing';
@@ -158,6 +158,40 @@
     if (s.includes('mechanics')) return 'badge-mechanics';
     if (s.includes('physics')) return 'badge-physics';
     return 'badge-general';
+  }
+
+  // Cache for authentic YouTube titles
+  const youtubeTitleCache = {};
+  try {
+    const cached = localStorage.getItem('mystudies_yt_titles');
+    if (cached) Object.assign(youtubeTitleCache, JSON.parse(cached));
+  } catch (e) {}
+
+  function saveTitleCache() {
+    try {
+      localStorage.setItem('mystudies_yt_titles', JSON.stringify(youtubeTitleCache));
+    } catch (e) {}
+  }
+
+  async function fetchRealYouTubeTitle(videoId, callback) {
+    if (!videoId) return;
+    if (youtubeTitleCache[videoId]) {
+      callback(youtubeTitleCache[videoId]);
+      return;
+    }
+    try {
+      const res = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}&format=json`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.title) {
+          youtubeTitleCache[videoId] = data.title;
+          saveTitleCache();
+          callback(data.title);
+        }
+      }
+    } catch (e) {
+      // Offline or network error fallback
+    }
   }
 
   function extractYouTubeId(url) {
@@ -174,7 +208,7 @@
         const url = rawItem.url || rawItem.link || '';
         const videoId = rawItem.videoId || extractYouTubeId(url);
         const pdf = rawItem.pdf || 'Custom Video';
-        const title = rawItem.title || 'Untitled Video';
+        const title = (videoId && youtubeTitleCache[videoId]) || rawItem.title || 'YouTube Video';
         all.push({
           ...rawItem,
           title,
@@ -328,6 +362,17 @@
       const titleElem = card.querySelector('.card-title');
       const watchBtn = card.querySelector('.btn-watch');
 
+      // Auto-fetch and sync the authentic YouTube title
+      if (item.videoId) {
+        fetchRealYouTubeTitle(item.videoId, (realTitle) => {
+          if (realTitle && titleElem.textContent !== realTitle) {
+            titleElem.textContent = realTitle;
+            titleElem.title = realTitle;
+            item.title = realTitle;
+          }
+        });
+      }
+
       const openPlayer = () => openVideoModal(item);
       thumbWrap.addEventListener('click', openPlayer);
       titleElem.addEventListener('click', openPlayer);
@@ -466,7 +511,7 @@
     });
   }
 
- 
+
   initTheme();
   loadWatchedState();
   setupEventListeners();
