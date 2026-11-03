@@ -835,22 +835,9 @@ body {
   gap: 0.5rem;
 }
 
-.card-source-pdf {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
-}
-
-.video-card:hover .card-source-pdf {
-  color: var(--text-secondary);
-  transform: translateX(3px);
+.card-source-pdf,
+.modal-source {
+  display: none !important;
 }
 
 .card-title {
