@@ -289,8 +289,8 @@ body {
 /* ---- Search ---- */
 .search-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 480px;
+  width: 90%;
+  max-width: 400px;
   transition: max-width 0.4s var(--ease-out);
 }
 
@@ -311,7 +311,7 @@ body {
 
 .search-wrapper:focus-within .search-icon {
   color: var(--primary);
-  transform: translateY(-50%) scale(1.15);
+  transform: translateY(-50%) scale(1);
 }
 
 .search-wrapper input {

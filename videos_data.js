@@ -1,15 +1,34 @@
 window.STUDY_VIDEOS_DATA = {
   "Math 1": [
-    {
-      "title": "session 1 | real functions , domain , range & increasing , decreasing .. فلسطين حرة",
-      "url": "https://www.youtube.com/watch?v=n81dAbhG2kk&t=4822s&pp=ygUoZG9tYWluIGFuZCByYW5nZSDYp9i52K_Yp9iv2Yog2YfZhtiv2LPZhw%3D%3D",
-      "videoId": "n81dAbhG2kk"
+     {
+      "url":"http://youtube.com/watch?v=n84LTdJOUiI"
     },
     {
-      "pdf": "MATH 1 - H.W Assignment (10).pdf",
-      "title": "Calculus 1 - Derivatives",
+      "url":"https://www.youtube.com/watch?v=JFIxiXsuKHw"
+    },
+    {
+      "url":"https://www.youtube.com/watch?v=rVSJOGTMLBM"
+    },
+    {
+      "url":"https://www.youtube.com/watch?v=E8KWOSBQSuE&pp=ygUXbWF0aGltYXRpY2FsIGluZGVjdGlvaW4%3D"
+    }, 
+    {
+      "url":"https://www.youtube.com/watch?v=YG15m2VwSjA"
+    },
+    {
+      "url":"https://www.youtube.com/watch?v=VQSUkI6Qk1c"
+    },
+    {
+      "url":"https://www.youtube.com/watch?v=EJkxkfgZ_yY"
+    },
+    {
+       "url":"https://www.youtube.com/watch?v=PqzzsqL9Zgw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=n81dAbhG2kk&t=4822s&pp=ygUoZG9tYWluIGFuZCByYW5nZSDYp9i52K_Yp9iv2Yog2YfZhtiv2LPZhw%3D%3D",
+    },
+    {
       "url": "https://youtu.be/5yfh5cf4-0w",
-      "videoId": "5yfh5cf4-0w"
     },
     {
       "pdf": "MATH 1 - H.W Assignment (11).pdf",
@@ -393,6 +412,7 @@ window.STUDY_VIDEOS_DATA = {
     }
   ],
   "Mechanics": [
+    
     {
       "pdf": "Mechanics - H.W Assignment (10).pdf",
       "title": "Engineering Mechanics: Statics Lecture 1 | Scalars, Vectors, and Vector Multiplication",
