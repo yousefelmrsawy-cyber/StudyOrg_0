@@ -1,7 +1,7 @@
 //AI recommendtion !!!
 (function () {
 
-  
+
   let studyData = {};
   let activeSubject = 'all';
   let activeStatus = 'all';
@@ -123,7 +123,7 @@
           loaded = true;
         }
       }
-    } catch (e) {}
+    } catch (e) { }
 
     // Check if window.STUDY_VIDEOS_DATA is available right away
     if (!loaded && window.STUDY_VIDEOS_DATA && Object.keys(window.STUDY_VIDEOS_DATA).length > 0) {
@@ -131,20 +131,21 @@
       loaded = true;
     }
 
-    // Attempt to fetch MyStudies_Videos.md for live sync if available
-    try {
-      const response = await fetch('MyStudies_Videos.md');
-      if (response.ok) {
-        const text = await response.text();
-        const parsed = parseMarkdownData(text);
-        if (Object.keys(parsed).length > 0) {
-          studyData = parsed;
-          loaded = true;
+    // Only attempt to fetch MyStudies_Videos.md if not loaded and NOT on file:// protocol (avoids browser CORS warning)
+    if (!loaded && window.location.protocol !== 'file:') {
+      try {
+        const response = await fetch('MyStudies_Videos.md');
+        if (response.ok) {
+          const text = await response.text();
+          const parsed = parseMarkdownData(text);
+          if (Object.keys(parsed).length > 0) {
+            studyData = parsed;
+            loaded = true;
+          }
         }
+      } catch (err) {
+        // Silently handled fallback
       }
-    } catch (err) {
-      // Fetch blocked by local CORS policy (file:// protocol), safely fallback to window.STUDY_VIDEOS_DATA
-      console.log('Serving from bundled video data (local environment)');
     }
 
     if (!loaded) {
@@ -177,12 +178,12 @@
   try {
     const cached = localStorage.getItem('mystudies_yt_titles');
     if (cached) Object.assign(youtubeTitleCache, JSON.parse(cached));
-  } catch (e) {}
+  } catch (e) { }
 
   function saveTitleCache() {
     try {
       localStorage.setItem('mystudies_yt_titles', JSON.stringify(youtubeTitleCache));
-    } catch (e) {}
+    } catch (e) { }
   }
 
   async function fetchRealYouTubeTitle(videoId, callback) {
@@ -529,18 +530,12 @@
   }
 
 
-  // --------------------------------------------------------------------------
-  // 7. YTB_Control: Live Browser Console Controller
-  // --------------------------------------------------------------------------
+
   window.YTB_Control = async function (category, url) {
     if (!category) {
       console.log(
-        '%c[YTB_Control Guide]%c\n' +
-        '• Add Video:    YTB_Control("MATH 1", "https://www.youtube.com/watch?v=...")\n' +
-        '• Delete Video: YTB_Control("Del", "https://www.youtube.com/watch?v=...")\n' +
-        '• Export Data:  YTB_Control("export")\n' +
-        '• Reset Data:   YTB_Control("reset")',
-        'color: #3b82f6; font-weight: bold; font-size: 1.05em;', 'color: inherit;'
+        '%cAdd a category like Math 1 ....',
+        'color: #3b82f6; font-weight: bold; font-size: 1.05em;'
       );
       return 'YTB_Control ready. Pass a category and URL to add/delete.';
     }
@@ -603,10 +598,9 @@
         renderVideos();
 
         console.log(
-          `%c[YTB_Control] Successfully deleted video from [${removedFrom.join(', ')}]!%c`,
-          'color: #ef4444; font-weight: bold;', ''
+          '%cSuccessfully deleted video!!!!!!!!!!!',
+          'color: #ef4444; font-weight: bold;'
         );
-        console.log('Updated videos_data.js code (saved to browser storage):');
         console.log('window.STUDY_VIDEOS_DATA = ' + JSON.stringify(studyData, null, 2) + ';');
         return `Deleted ${removedCount} video(s) matching "${cleanUrl}".`;
       } else {
@@ -651,7 +645,7 @@
             saveTitleCache();
           }
         }
-      } catch (e) {}
+      } catch (e) { }
     }
 
     const newVideo = {
@@ -670,12 +664,10 @@
     renderVideos();
 
     console.log(
-      `%c[YTB_Control] Added video to "${targetCategory}"!%c\nTitle: ${videoTitle}\nURL: ${cleanUrl}`,
-      'color: #10b981; font-weight: bold;', ''
+      '%cUPDATE IS DONE !!!!!!!!!!!',
+      'color: #10b981; font-weight: bold;'
     );
-    console.log('Updated videos_data.js code (saved to browser storage):');
     console.log('window.STUDY_VIDEOS_DATA = ' + JSON.stringify(studyData, null, 2) + ';');
-
     return `Added to "${targetCategory}": ${videoTitle}`;
   };
 
